@@ -1,0 +1,36 @@
+package Polymorphism;
+
+class fruit{
+    String name;
+    String taste;
+    String size;
+   
+ public void eat(){
+        System.out.println("The fruit "+name+ " tastes "+taste+ " is in the size "+size);
+    }
+}
+class Apple extends fruit{
+    Apple(String n, String t, String s){
+        name=n;
+        taste=t;
+        size=s;
+        eat();
+    }
+}
+
+class Orange extends fruit{
+    Orange(String n, String t, String s){
+        name=n;
+        taste=t;
+        size=s;
+        eat();
+    }
+}
+
+public class Mymainclass
+{
+public static void main(String[] args) {
+  Apple a=new Apple("Apple","Sweet","small");
+  Orange o=new Orange("Orange","Sour","small");
+}
+}
