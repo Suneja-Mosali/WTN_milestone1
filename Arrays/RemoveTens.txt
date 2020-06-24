@@ -1,0 +1,24 @@
+package Arrays;
+public class RemoveTens {
+public static void main(String args[]) {
+	int array[]=new int[] {1,5,3,10,10,7};
+	int len=array.length;
+	int resultarray[]=new int[len];
+	int i,j=0;
+	for(i=0;i<len;i++)
+	{
+		if(array[i]!=10) {
+			resultarray[j++]=array[i];
+		}
+	}
+	for(i=0;i<len;i++) {
+		if(i>=j) {
+		array[i]=0;
+	}
+		array[i]=resultarray[i];
+	}
+	for(i=0;i<len;i++) {
+System.out.print(array[i]+" ");
+}
+}
+}

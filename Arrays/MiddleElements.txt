@@ -1,0 +1,22 @@
+package Arrays;
+import java.util.Scanner;
+public class MiddleElements {
+public static void main(String args[]) {
+	Scanner s=new Scanner(System.in);
+	int array1[]=new int[3];
+	int array2[]=new int[3];
+	int array3[]=new int[2];
+	int i;
+	for(i=0;i<3;i++) {
+		array1[i]=s.nextInt();
+	}
+	for(i=0;i<3;i++) {
+		array2[i]=s.nextInt();
+	}
+	array3[0]=array1[1];
+	array3[1]=array2[1];
+	for(i=0;i<2;i++) {
+		System.out.print(array3[i]+" ");
+	}
+}
+}
