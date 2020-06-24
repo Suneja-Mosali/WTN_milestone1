@@ -1,0 +1,6 @@
+package LanguageBasics;
+public class Command1 {
+		public static void main(String[] a) {
+			System.out.println(a[0]+ " technologies "+ a[1]);
+		}
+	}
