@@ -1,0 +1,18 @@
+package Loops;
+public class Palindrome {
+	public static void main(String[] a) {
+	    int num=Integer.parseInt(a[0]);
+	    int revnum=0; int rem; int ori;
+            ori=num;
+	    while(num!=0)
+	    {
+	        rem=num%10;
+	        revnum=revnum*10+rem;
+	        num=num/10;
+	    }
+	    if(ori==revnum)
+		System.out.println(+ori+" is palindrome");
+		else
+		System.out.println(+ori+" is not a palindrome");
+	}
+}

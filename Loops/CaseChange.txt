@@ -1,0 +1,18 @@
+package Loops;
+public class CaseChange {
+public static void main(String a[]) {
+	String str=a[0];
+	char c=str.charAt(0);
+	if(c>=97 && c<=122)
+	{
+		System.out.println(str.toUpperCase());
+	}
+	else if(c>=65 && c<=90)
+	{
+		System.out.println(str.toLowerCase());
+	}
+	else
+		System.out.println("Enter a valid Alphabet");
+		
+}
+}
