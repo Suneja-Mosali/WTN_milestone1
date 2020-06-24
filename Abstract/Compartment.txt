@@ -1,0 +1,61 @@
+package Abstract;
+import java.util.Random;
+abstract class Compartment{
+	abstract public void  notice();
+}
+
+class FirstClass extends Compartment{
+public void notice() {
+	 System.out.println("This is compartment of FirstClass");
+ }
+}
+
+class Ladies extends Compartment{
+	public void notice() {
+		 System.out.println("This is compartment of Ladies");
+	 }	
+}
+
+class General extends Compartment{
+public	void notice() {
+		 System.out.println("This is compartment of General");
+	 }
+}
+
+class Luggage extends Compartment{
+public void notice() {
+		 System.out.println("This is compartment of Luggage");
+	 }
+}
+
+
+public class TestCompartment { 
+	public static void main(String [] args) { 
+	
+		Compartment comp[]=new Compartment[10]; 
+        Random rnd=new Random(); 
+         
+        int num=0; 
+          
+        for(int i=0;i<10;i++) { 
+	        num=rnd.nextInt(4); 
+	        
+            if(num==0) 
+	       comp[i]=new FirstClass(); 
+            
+            else if(num==1) 
+	       comp[i]=new Ladies();
+            
+            else if(num==2) 
+           comp[i]=new General(); 
+            
+           else 
+        	   comp[i]=new Luggage(); 
+          
+        
+        comp[i].notice(); 
+        System.out.println(); 
+        
+        }
+        } 
+} 
