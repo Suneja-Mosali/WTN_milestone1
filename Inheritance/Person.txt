@@ -1,0 +1,66 @@
+package Inheritance;
+
+class Person{
+	
+public String name;
+}
+
+class Employee extends Person{
+	
+	public  double annualsalary;
+	public int yoj;
+	public String nin;
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setName()
+	{
+		name="Suneja";
+	}
+	
+	public double getAnnualsalary() {
+		return annualsalary;
+	}
+	
+	public void setAnnualsalary() {
+		annualsalary=40000;
+	}
+	
+	public int getYoj() {
+		return yoj;	
+	}
+	
+	public void setYoj()
+	{
+		yoj=2021;
+	}
+	
+	public String getNin()
+	{
+		return nin;
+	}
+	
+	public void setNin() {
+		nin="QQ123456C";
+	}
+}
+
+public class TestEmployee {
+
+	public static void main(String args[]) {
+		
+		Employee e1=new Employee();
+
+	e1.setAnnualsalary();
+	e1.setYoj();
+	e1.setNin();
+	e1.setName();
+	System.out.println("The Name is : "+e1.getName());
+	System.out.println("The Annual Salary is : "+e1.getAnnualsalary());
+	System.out.println("Year of joining : "+e1.getYoj());
+    System.out.println("National insurance number is : "+e1.getNin());
+	}
+}
