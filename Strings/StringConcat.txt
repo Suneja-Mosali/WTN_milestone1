@@ -1,0 +1,26 @@
+package String;
+
+import java.util.Scanner;
+
+public class StringConcat {
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		String str1=sc.nextLine();
+		String str2=sc.nextLine();
+		
+		
+		String str3=str1.toLowerCase();
+		String str4=str2.toLowerCase();		
+		String str6="";
+		
+		if(str3.substring(str3.length()-1,str3.length()).equals(str4.substring(0,1))) {
+			str6= str3+str4.substring(1,str4.length());}		
+		else
+		{
+		str6= str3.concat(str4);
+		}
+		System.out.println(str6);
+
+}
+}

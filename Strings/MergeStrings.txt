@@ -1,0 +1,35 @@
+package String;
+
+import java.util.Scanner;
+import java.lang.String;
+
+public class MergeStrings {
+
+public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		String a=sc.nextLine();
+		String b=sc.nextLine();
+		
+		StringBuilder s=new StringBuilder();
+		
+		int len1=a.length();
+		int len2=b.length();
+		
+		for(int i=0;i<len1 || i<len2;i++) 
+		{
+			if(i<len1)
+			{
+			 s.append(a.charAt(i));
+			}
+			
+			if(i<len2)
+			{
+			 s.append(b.charAt(i));
+			}
+		}
+		
+		System.out.println(s.toString());
+		
+}
+}

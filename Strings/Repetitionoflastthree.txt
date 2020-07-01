@@ -1,0 +1,23 @@
+package String;
+
+import java.util.Scanner;
+
+public class Repetitionoflastthree {
+
+public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine();
+		int n=sc.nextInt();
+		
+		int len1=str.length();
+		String result;
+		result=str.substring(n-1,len1);
+		
+		int i;
+		for(i=0;i<n;i++) 
+		{
+		  System.out.print(result);
+		}
+}
+}

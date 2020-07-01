@@ -1,0 +1,21 @@
+package String;
+
+import java.util.Scanner;
+
+public class ShortLongShort {
+
+public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		String a=sc.nextLine();
+		String b=sc.nextLine();
+		
+		String str1=a.concat(b);
+		
+		String str2=str1.concat(a);
+		
+		System.out.println(str2);
+	
+}
+}

@@ -1,0 +1,32 @@
+package String;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class SpecialcharacterString {
+ 
+	public static void main(String args[]) {
+		 Pattern pattern = Pattern.compile("[a-zA-Z0-9]*");
+		
+//		 Scanner sc=new Scanner(System.in);
+		 String s="ab*cd";
+		 
+		 Matcher matcher=pattern.matcher(s);
+		 String str="";
+		 if(!matcher.matches()) {
+			int i;
+			for(i=0;i<s.length();i++)
+			{
+		if(s.charAt(i)==('*')){
+			str=s.substring(0,s.charAt(i-1))+s.substring(s.charAt(i+1),s.length());
+		}
+		}
+		 }
+		 else
+		 {
+			 System.out.print("This string doesn't contain *");
+		 }
+		 System.out.println(str);
+		 
+	}
+}

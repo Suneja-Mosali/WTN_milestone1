@@ -1,0 +1,18 @@
+package String;
+
+import java.util.Scanner;
+import java.lang.String;
+
+public class CheckCharX {
+
+public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		String str=sc.nextLine();
+		int len=str.length();
+			int	index1=str.indexOf("*");
+	String s=str.substring(0,index1-1)+str.substring(index1+2,len);
+	 System.out.println(s); 
+}
+}
