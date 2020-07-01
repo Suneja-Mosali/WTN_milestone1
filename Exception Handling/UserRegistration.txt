@@ -1,0 +1,36 @@
+package ExceptionHandling;
+
+import java.util.Scanner;
+
+class InvalidCountryException extends Exception{
+    InvalidCountryException(String message)
+    {
+    super(message);
+    }
+}
+public class UserRegistration{
+       
+       void registerUser(String username,String userCountry) throws InvalidCountryException
+    {
+        if(userCountry.equalsIgnoreCase("India")){
+        System.out.println("User registration done successfully");}
+        else {
+        System.out.println("Outside India cannot be registered");
+    }
+    }
+       public static void main (String[] args) {
+    	   Scanner sc= new Scanner(System.in);
+	       String name=sc.nextLine();
+	       String country=sc.nextLine();
+       
+           UserRegistration ur1= new UserRegistration();
+           try {
+        	   ur1.registerUser(name, country);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+       
+    }
+}

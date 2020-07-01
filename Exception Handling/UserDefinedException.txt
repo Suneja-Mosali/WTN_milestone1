@@ -1,0 +1,62 @@
+package ExceptionHandling;
+import java.util.Scanner;
+
+	class ValidNumbers extends Exception{
+	    ValidNumbers(String message)
+	    {
+	        super(message);
+	    }
+	}
+
+	class Marks{
+		String Student;
+	    int mark1;
+	    int mark2;
+	    int mark3;	    
+	    Marks(String n,int m1,int m2,int m3)
+	    {
+	    	this.Student=n;
+	        this.mark1=m1;
+	        this.mark2=m2;
+	        this.mark3=m3;
+	    }
+	   
+	    void Average() throws ValidNumbers{
+	        if(mark1<0 || mark1>100 ||  mark2<0 || mark2>100 || mark2<0 ||mark3>100)
+	        {
+	        throw new ValidNumbers("Not in the range of 0-100");
+	        }
+	        else{
+	        //    int avg=(mark1+mark2+mark3)/3;
+	            System.out.println("The Average of the marks obtained is: "+((mark1+mark2+mark3)/3));
+	        }
+	    }
+	}
+	public class UserDefinedException
+	{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   String Student;
+	   int m1;
+	   int m2;
+	   int m3;
+	   
+	//   Marks mm1= new Marks("Suneja",97,99,23);
+	//   Marks mm2= new Marks("Mosali",45,78,56);
+	   for(int i=0;i<2;i++)
+	   {
+	   try{
+	       Student=sc.next();
+	       m1=Integer.parseInt(sc.next());
+	       m2=Integer.parseInt(sc.next());
+	       m3=Integer.parseInt(sc.next());
+		   Marks mm1= new Marks(Student,m1,m2,m3);
+	       mm1.Average();
+	   }
+	   
+	   catch(Exception e){
+	       System.out.println(e);
+	   }
+	   }
+	    }
+	}

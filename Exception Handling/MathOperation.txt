@@ -1,0 +1,23 @@
+package ExceptionHandling;
+public class MathOperation {
+
+	public static void main(String a[]) throws Exception{
+		int i,n,sum=0;
+		float avg=0;
+		 n=a.length;
+		int array[]=new int[n];
+				
+			for(i=0;i<n;i++)
+			{
+				array[i]=Integer.parseInt(a[i]);
+			}
+			for(i=0;i<5;i++)
+			{
+				sum+=array[i];
+			}
+			avg=(sum)/5;
+		
+		System.out.println("Sum is: "+sum);
+		System.out.println("Average is: "+avg);
+	}
+}
