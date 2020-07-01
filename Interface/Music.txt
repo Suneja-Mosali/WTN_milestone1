@@ -1,0 +1,11 @@
+package InterfaceMusic.String;
+
+import InterfaceMusic.Playable;
+
+public class Veena implements Playable
+{
+public void play() {
+		System.out.println("Veena wants to play the instrument.");
+	}
+
+}

@@ -1,0 +1,16 @@
+package InterfaceMusic.Live;
+
+import InterfaceMusic.String.Veena;
+import InterfaceMusic.Wind.Saxophone;
+
+public class Test {
+
+public static void main(String a[])
+{
+	Veena v=new Veena();
+	v.play();
+	
+	Saxophone s=new Saxophone();
+	s.play();
+}
+}

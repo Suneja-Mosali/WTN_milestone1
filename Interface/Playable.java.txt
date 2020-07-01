@@ -1,0 +1,5 @@
+package InterfaceMusic;
+
+public interface Playable {
+void play();
+}

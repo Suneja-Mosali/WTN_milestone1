@@ -1,0 +1,11 @@
+package InterfaceMusic.Wind;
+
+import InterfaceMusic.Playable;
+
+public class Saxophone implements Playable{
+
+	public void play()
+	{
+		System.out.println("Veena is playing saxophone instrument.");
+	}
+}
